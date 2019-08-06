@@ -1,0 +1,134 @@
+/* Variables */
+:root {
+  --body-bg-color: #f3f4f5;
+  --header-bg-color: white;
+  --main-text-color: #2c4249;
+  --highlight-color: #2efccf;
+  --iframe-bg-color: #dde0e2;
+  --thin-stroke-color: #dde0e2;
+  --fancy-font: "Grenze", sans-serif;
+  --plain-font: "Work Sans", sans-serif;
+  --box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--plain-font);
+  color: var(--main-text-color);
+  background: var(--body-bg-color);
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+h2 {
+  font-family: var(--fancy-font);
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: var(--fancy-font);
+  font-weight: 500;
+  border-bottom: #dde0e2 solid 1px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 0.875rem;
+  border-bottom: var(--thin-stroke-color) solid 1px;
+  padding: 0 0.625rem 1rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: var(--highlight-color);
+}
+
+.intro {
+  border-top: var(--highlight-color) solid 5px;
+  background: var(--header-bg-color);
+  padding: 5rem 0;
+  border-bottom: var(--thin-stroke-color) solid 1px;
+  box-shadow: var(--box-shadow);
+}
+
+.intro-copy {
+  width: 90%;
+  max-width: 50rem;
+  margin: 0 auto;
+  /* color: #162f36; */
+}
+
+.intro-copy__headline {
+  margin: 0;
+}
+
+.intro-logo {
+  display: block;
+  height: 4rem;
+  margin: 0 0 3rem;
+  fill: var(--highlight-color);
+}
+
+.work-copy {
+  width: 90%;
+  max-width: 50rem;
+  margin: 5rem auto 5rem;
+}
+
+.figma-iframe__container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.figma-iframe__caption:before {
+  content: "\2191";
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
+  font-weight: 900;
+}
+
+.figma-iframe--large {
+  box-sizing: border-box;
+  flex: 2;
+  min-width: 100%;
+  padding: 0 1rem;
+}
+
+.figma-iframe--large iframe {
+  height: 60rem;
+}
+
+.figma-iframe--small {
+  box-sizing: border-box;
+  min-width: 24rem;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.figma-iframe--small iframe {
+  height: 40rem;
+}
+
+iframe {
+  background: var(--iframe-bg-color);
+  height: 60rem;
+  max-height: 70vh;
+  box-shadow: var(--box-shadow);
+}
